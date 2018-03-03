@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>matches</title>
+	<title>Matches</title>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	 {% load static %}
 	 <link rel="stylesheet" href="{% static 'pinkslips/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
@@ -15,24 +15,24 @@
 	      	<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
 	      </p>
 	      <p class="navbar-brand">
-	      	<a href="/home">home</a>
+	      	<a href="/home">Home</a>
 	      </p>
 	    </div>
-	    <p class="navbar-brand navbar-right"><a href="/logout" class="navbar-link">logout</a></p>
+	    <p class="navbar-brand navbar-right"><a href="/logout" class="navbar-link">Logout</a></p>
 	  </div>
 	</nav>
 	<div class="container">
-		<h3>matches</h3>
+		<h3>Matches</h3>
 		<table class="table">
 			<thead class="thead-default">
     			<tr>
-      				<th>username</th>
-      				<th>year</th>
-      				<th>make</th>
-      				<th>model</th>
-      				<th>weight</th>
-      				<th>power</th>
-      				<th>drivetrain</th>
+      				<th>Username</th>
+      				<th>Year</th>
+      				<th>Make</th>
+      				<th>Model</th>
+      				<th>Weight</th>
+      				<th>Power</th>
+      				<th>Drivetrain</th>
     			</tr>
 
     			{% for convo in convo %}

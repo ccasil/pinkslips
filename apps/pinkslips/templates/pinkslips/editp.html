@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>edit profile</title>
+	<title>Edit Profile</title>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	 {% load static %}
 	 <link rel="stylesheet" href="{% static 'pinkslips/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
@@ -15,20 +15,20 @@
 	      	<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
 	      </p>
 	      <p class="navbar-brand">
-	      	<a href="/home">home</a>
+	      	<a href="/home">Home</a>
 	      </p>
 	      <p class="navbar-brand">
-	      	<a href="/profile">back to profile</a>
+	      	<a href="/profile">Back to Profile</a>
 	      <p class="navbar-brand">
-	      	<a href="/matches">matches({{ request.session.num }})</a>
+	      	<a href="/matches">Matches ({{ request.session.num }})</a>
 	      </p>
 	    </div>
-	    <p class="navbar-brand navbar-right"><a href="/logout" class="navbar-link">logout</a></p>
+	    <p class="navbar-brand navbar-right"><a href="/logout" class="navbar-link">Logout</a></p>
 	  </div>
 	</nav>
-	<div><h2>edit profile</h2></div>
+	<div><h2>Edit Profile</h2></div>
 	<div class="centerlogo">
-			<h4>car info</h4>
+			<h4>Car Info</h4>
 			{% if messages %}
 	  			<ul class="messages">
 	    			{% for message in messages %}
@@ -42,7 +42,7 @@
 				<form action="/upload" method="post">
 					{% csrf_token %}
 				<div class="form-group">
-					<label>image url (press upload to update profile picture)</label>
+					<label>image URL (upload profile picture)</label>
 					<input type="text" class="form-control" value="http://i.ebayimg.com/images/g/pKwAAOSwT5tWGG7C/s-l300.jpg" disabled>
 					<input type="hidden" name="pic" value="http://i.ebayimg.com/images/g/pKwAAOSwT5tWGG7C/s-l300.jpg">
 					<input type="submit" name="submit" class="btn btn-danger form-control" value="upload">
@@ -52,37 +52,37 @@
 					{% csrf_token %}
 				<input type="hidden" name="uid" value="{{ request.session.id }}">
 				<div class="form-group">
-					<label>description (modifications)</label>
+					<label>Description/Modifications</label>
 					<textarea  name="desc" class="form-control" rows="3"></textarea>
 				</div>
 			</div>
 			<div class="column">
 				<div class="form-group">
-					<label>year</label>
+					<label>Year</label>
 					<input type="number" name="year" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>make</label>
+					<label>Make</label>
 					<input type="text" name="make" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>model</label>
+					<label>Model</label>
 					<input type="text" name="model" class="form-control">
 				</div>
 			</div>
 			<div class="column">
 				<div class="form-group">
-					<label>power in hp</label>
+					<label>Power (HP)</label>
 					<input type="text" name="power" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>weight in lbs</label>
+					<label>Weight (lbs)</label>
 					<input type="text" name="weight" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>drivetrain</label>
+					<label>Drivetrain</label>
 					<select class="form-control" name="dtrain">
-						<option selected="selected">choose</option>
+						<option selected="selected">Choose</option>
   						<option>FWD</option>
   						<option>RWD</option>
   						<option>AWD/4WD</option>
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="centerlogo"><input type="submit" name="submit" class="btn btn-danger" value="save"></div>
+		<div class="centerlogo"><input type="submit" name="submit" class="btn btn-danger" value="Save"></div>
 	</form>
 </div>
 </body>
