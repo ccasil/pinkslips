@@ -69,6 +69,7 @@ function()
 
      //If creating a search interface, set onclick event for the search button.  Make sure the ID used matches your search button ID.
      $('#cq-search-btn').click( function(){ carquery.search(); } );
+     $('#cq-show-data').click(  function(){ carquery.populateCarData('car-model-data'); } );
 });
 </script>
 </head>
@@ -78,8 +79,8 @@ function()
 <select name="car-models" id="car-models"></select>
 <select name="car-model-trims" id="car-model-trims"></select> 
 <input id="cq-show-data" type="button" value="Show Data" />
-<div id="car-model-data"></div>
-<table> 
+<div id="car-model-data" style="text-align: center;"></div>
+<!-- <table> 
    <tr> 
       <td valign="top"><div id="make-list" /></td> 
       <td valign="top"><div id="model-list" /></td> 
@@ -130,6 +131,6 @@ function()
    </div>
 </div>
 
-<div id="cq-search-result" style="display:none"></div>
+<div id="cq-search-result" style="display:none"></div> -->
 </body>
 </html>
